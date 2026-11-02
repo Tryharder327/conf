@@ -1,0 +1,33 @@
+ <%- include('header') %>
+
+  <link rel="/public/css/bootrstrap.min.css">
+ <link rel="/public/css/style.css">
+
+<h1><%= title %></h1>
+
+<% if (errors.length) { %>
+  <ul>
+    <% errors.forEach(e => { %>
+      <li style="color: red;"><%= e %></li>
+    <% }) %>
+  </ul>
+<% } %>
+
+<form method="POST" action="/register">
+  <label for="login">Логин:</label>
+  <input type="text" name="login" id="login" placeholder="Введите логин"><br><br>
+
+  <label for="password">Пароль:</label>
+  <input type="password" name="password" id="password" placeholder="Введите пароль"><br><br>
+
+  <label for="fullname">ФИО:</label>
+  <input type="text" name="fullname" id="fullname" placeholder="Введите ФИО"><br><br>
+
+  <label for="phone">Телефон:</label>
+  <input type="text" name="phone" id="phone" placeholder="Введите телефон"><br><br>
+
+  <label for="email">Email:</label>
+  <input type="email" name="email" id="email" placeholder="Введите email"><br><br>
+
+  <button type="submit">Зарегистрироваться</button>
+</form>

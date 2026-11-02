@@ -2,7 +2,7 @@
   "name": "conferences_rf",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "node server.js",
   "scripts": {
     "start": "node server.js"
   },
@@ -11,6 +11,11 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "express": "^4.19.2"
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^13.0.3",
+    "bootstrap": "^6.0.0-alpha.1",
+    "ejs": "^6.0.1",
+    "express": "^4.19.2",
+    "express-session": "^1.19.0"
   }
 }

@@ -1,0 +1,27 @@
+<%- include('header') %>
+
+<h1><%= title %></h1>
+
+<p>Пользователь: <strong><%= user.fio %></strong></p>
+
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Аудитория</th>
+            <th>Статус</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% requests.forEach(r => { %>
+            <tr>
+                <td><%= r.room_name %></td>
+                <td><%= r.status %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+<br>
+<a href="/login">Выйти</a>
+
+<%- include('footer') %>
